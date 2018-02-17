@@ -1,0 +1,10 @@
+button, .btn {
+  display: inline-block;
+  height: $baseline * 3;
+  &.btn-sm {
+    height: $baseline * 2;
+  }
+  &.btn-lg {
+    height: $baseline * 4;
+  }
+}

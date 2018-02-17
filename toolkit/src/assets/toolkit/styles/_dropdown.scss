@@ -1,0 +1,114 @@
+select, select.form-control { display: none; }
+
+.dropdown {
+    @extend .list-unstyled;
+    @include bbox;
+    background-color: white;
+    height: $baseline * 3;
+    position: relative;
+    border: 1px solid $gray-200;
+    padding: 6px 30px 6px $input-padding-x;
+}
+
+.dropdown--option-list {
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+
+    .dropdown__label {
+        padding-right: $pad;
+        padding-left: $pad;
+    }
+
+    .dropdown__list {
+        width: 220px;
+    }
+}
+
+.dropdown.on {
+    border-color: $blue;
+
+    .dropdown__list {
+        right: 0;
+        height: auto;
+        opacity: 1;
+    }
+
+    .dropdown__label,
+    .dropdown__selected-item {
+        color: $blue;
+    }
+}
+
+.dropdown__label,
+.dropdown__selected-item {
+    cursor: pointer;
+    position: relative;
+    padding: 0 20px 0 0;
+
+    &::after {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 4px;
+        width: $gutter / 2;
+        height: 15px;
+        text-align: right;
+        @include fas;
+        content: fa-content($fa-var-caret-down);
+    }
+}
+
+.dropdown__label--arrow-off,
+.dropdown__selected-item--arrow-off {
+    &::after {
+        display: none;
+    }
+}
+
+.dropdown__list {
+    @include list-unstyled;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: white;
+    opacity: 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.1s all linear;
+
+    li {
+        cursor: pointer;
+        padding-left: $pad;
+        padding-right: $pad;
+        @include flex;
+        justify-content: space-between;
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 6px;
+        padding-bottom: 6px;
+
+        &.selected {
+            background-color: $blue;
+            color: white;
+
+            &:hover {
+                background-color: darken($blue, 20%);
+                color: white;
+            }
+        }
+
+        &:hover {
+            background-color: darken($blue, 20%);
+            color: white;
+        }
+
+        .icon {
+            position: relative;
+            margin-top: -3px;
+            margin-bottom: -6px;
+        }
+    }
+}

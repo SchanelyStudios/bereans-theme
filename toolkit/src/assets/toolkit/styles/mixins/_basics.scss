@@ -1,0 +1,26 @@
+
+@mixin bbox {
+  box-sizing: border-box;
+}
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin type-setup(
+    $margin-top: $baseline,
+    $margin-bottom: 0,
+    $padding-top: 0,
+    $padding-bottom: 0,
+    $leading: $baseline * 2,
+    $color: $gray,
+    $font: $font-family-sans-serif
+) {
+    margin-top: $margin-top;
+    margin-bottom: $margin-bottom;
+    padding-top: $padding-top;
+    padding-bottom: $padding-bottom;
+    line-height: $leading;
+    color: $color;
+    font-family: $font;
+}

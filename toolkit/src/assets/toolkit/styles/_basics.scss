@@ -1,0 +1,21 @@
+html {
+	font-size: $base-size;
+	&.grid-on {
+		background: white;
+		body {
+			line-height: $baseline * 2;
+			background: url("../images/grid-mobile.png") left top repeat;
+			@include media-breakpoint-up (md) {
+			    background: url("../images/grid-tablet.png") left top repeat;
+			}
+			@include media-breakpoint-up (xl) {
+			    background: url("../images/grid-desktop.png") left top repeat;
+			}
+		}
+	}
+}
+
+hr {
+	display: none;
+	margin-bottom: $baseline - 1px;
+}

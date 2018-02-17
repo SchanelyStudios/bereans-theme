@@ -1,0 +1,23 @@
+{
+  "name": "bereans-theme",
+  "version": "1.0.0",
+  "description": "A custom wordpress theme for Bereans at the Gate. Uses a toolkit based on Fabricator and building off of Bootstrap 4.",
+  "main": "index.php",
+  "scripts": {
+    "start": "browser-sync start --proxy http://localhost:80 -f \"**/*.*\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SchanelyStudios/bereans-theme.git"
+  },
+  "author": "Phil Schanely",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SchanelyStudios/bereans-theme/issues"
+  },
+  "homepage": "https://github.com/SchanelyStudios/bereans-theme#readme",
+  "dependencies": {
+    "npm-run-all": "^4.1.2"
+  },
+  "devDependencies": {}
+}

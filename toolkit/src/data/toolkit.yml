@@ -1,0 +1,11 @@
+colors:
+  primary:
+    Blue: "#104466"
+    Orange: "#C96700"
+    Gray: "#434343"
+  secondary:
+    Green: "#49AC38"
+    Teal: "#2DC9BD"
+    Blue: "#248ACD"
+    Purple: "#830FBD"
+    Red: "#C91400"

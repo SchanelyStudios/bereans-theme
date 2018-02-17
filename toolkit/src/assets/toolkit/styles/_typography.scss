@@ -1,0 +1,207 @@
+address {
+    font-weight: 300;
+    @include type-setup(
+        $padding-top: 6px,
+        $padding-bottom: 6px,
+        $leading: $baseline * 2
+    );
+}
+
+blockquote {
+	padding: 6px $gutter;
+	margin: 0;
+    position: relative;
+    border-left: none;
+	p {
+		&:first-of-type {
+			margin-top: 0;
+			padding-top: 0;
+		}
+		&:last-of-type {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			&::after {
+				font-weight: 400;
+				display: inline-block;
+				padding-left: 8px;
+				content: "\201D";
+				font-size: $h1-font-size;
+				line-height: 0;
+				vertical-align: -20px;
+				color: theme-color('mid-dark');
+			}
+		}
+	}
+	&::before {
+		content: "\201C";
+		position: absolute;
+		font-size: $h1-font-size;
+		top: -5px;
+		left: 13px;
+        color: theme-color('mid-dark');
+        font-weight: 400;
+	}
+	.citation,
+	footer {
+		display: block;
+		text-align: right;
+		font-size: 1.6rem;
+		line-height: $baseline * 2;
+		font-weight: 300;
+		font-style: italic;
+		color: theme-color('mid-dark');
+		margin-top: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+
+dd {
+	  font-weight: 300;
+    margin-left: $gutter;
+    margin-bottom: 0;
+    line-height: $baseline * 2;
+}
+
+dl {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-bottom: $baseline;
+}
+
+dt {
+    color: theme-color('mid-dark');
+    line-height: $baseline * 2;
+}
+
+h1,
+.h1 {
+	@include type-setup(
+      $padding-top: 10px,
+      $padding-bottom: 2px,
+      $leading: $baseline * 4,
+      $color: $blue-brand,
+      $font: $font-family-serif
+  );
+}
+
+h2,
+.h2 {
+	@include type-setup(
+      $padding-top: 9px,
+      $padding-bottom: 3px,
+      $leading: $baseline * 3,
+      $color: $blue-brand,
+      $font: $font-family-serif
+  );
+}
+
+h3,
+.h3 {
+	@include type-setup(
+    $padding-top: 6px,
+    $padding-bottom: 6px,
+    $leading: $baseline * 2,
+    $color: $blue-brand,
+    $font: $font-family-serif
+  );
+}
+
+h4,
+.h4 {
+	@include type-setup(
+      $padding-top: 7px,
+      $padding-bottom: 5px,
+      $color: $orange
+  );
+}
+
+h5,
+.h5 {
+  font-style: italic;
+	@include type-setup(
+      $padding-top: 7px,
+      $padding-bottom: 5px,
+      $color: $orange
+  );
+}
+
+h6,
+.h6 {
+	text-transform: uppercase;
+	@include type-setup(
+      $padding-top: 8px,
+      $padding-bottom: 4px,
+      $color: $orange,
+      $font: $font-family-condensed
+  );
+}
+
+.lead {
+  font-size: $font-size-lg;
+  line-height: $baseline * 3;
+  @include type-setup(
+      $margin-top: 0,
+      $padding-top: 10px,
+      $padding-bottom: 2px,
+      $leading: $baseline * 3
+  );
+}
+
+mark {
+    line-height: 0.8rem;
+}
+
+li {
+	font-weight: 300;
+  @include type-setup(
+      $margin-top: 0,
+      $padding-top: 6px,
+      $padding-bottom: 6px
+  );
+}
+
+.list-unstyled {
+	margin-left: auto;
+}
+
+.list-tight {
+	&>li {
+		padding-top: 0;
+		padding-bottom: 0;
+		&:first-of-type {
+			padding-top: 6px;
+		}
+		&:last-of-type {
+			padding-bottom: 6px;
+		}
+	}
+}
+
+.list-layout {
+	& > li {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: $gutter;
+    padding: 0;
+}
+
+p {
+    font-weight: 300;
+    @include type-setup(
+        $margin-top: 0,
+        $padding-top: 6px,
+        $padding-bottom: 6px
+    );
+}
+
+small {
+    line-height: 1rem;
+    color: gray('700');
+}

@@ -1,0 +1,62 @@
+.form-control {
+  height: $baseline * 3;
+}
+select.form-control:not([size]):not([multiple]) {
+  height: $baseline * 3;
+}
+
+.form-check {
+  margin-top: 0;
+  padding-left: 0;
+}
+.form-check-label {
+  margin-top: 0;
+}
+.form-check-input {
+  position: relative;
+  display: inline-block;
+  margin-top: $baseline - 5px;
+  margin-right: $gutter / 4;
+}
+
+.form-group {
+  margin-bottom: $baseline;
+}
+
+label {
+  font-weight: 700;
+  @include type-setup(
+    $padding-top: 6px,
+    $padding-bottom: 6px
+  );
+}
+
+input[type="radio"] {
+    @include input-toggle;
+
+    & + label::before {
+        @include far;
+        content: fa-content($fa-var-circle);
+    }
+
+    & + label::after {
+        @include fas;
+        content: fa-content($fa-var-dot-circle);
+        color: $blue;
+    }
+}
+
+input[type="checkbox"] {
+    @include input-toggle;
+
+    & + label::before {
+        @include far;
+        content: fa-content($fa-var-square);
+    }
+
+    & + label::after {
+        @include fas;
+        content: fa-content($fa-var-check-square);
+        color: $blue;
+    }
+}

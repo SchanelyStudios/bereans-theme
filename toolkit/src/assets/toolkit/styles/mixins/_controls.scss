@@ -1,0 +1,47 @@
+@mixin input-toggle() {
+    position: absolute;
+    opacity: 0;
+    top: 7px;
+    width: 100%;
+
+    & + label {
+        position: relative;
+        cursor: pointer;
+        text-align: left;
+        display: block;
+        width: auto;
+        padding: 6px 0 6px 30px;
+        font-weight: $font-weight-light;
+
+        &::before {
+            @include input-toggle-pseudo-el;
+        }
+
+        &::after {
+            @include input-toggle-pseudo-el;
+            opacity: 0;
+        }
+    }
+
+    &:checked + label::after {
+        opacity: 1;
+    }
+}
+@mixin input-toggle-pseudo-el() {
+    @include bbox;
+    display: block;
+    width: 20px;
+    height: 20px;
+    transition: 0.1s all linear;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    text-align: left;
+    font-size: $size-icon;
+    // @media screen and (min-width: $width-tablet) {
+    //     left: 10px;
+    // }
+    // @media screen and (min-width: $width-desktop) {
+    //     left: 10px;
+    // }
+}
