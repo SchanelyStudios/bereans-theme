@@ -1,0 +1,21 @@
+.tags {
+  @include flex;
+  p {
+    font-family: $font-family-condensed;
+    text-transform: uppercase;
+    color: $gray-600;
+    font-size: $font-size-sm;
+    padding-top: 8px;
+    padding-bottom: 4px;
+  }
+  ul {
+    @include list-inline;
+    margin-left: $pad;
+    li {
+      &::after { content: ','; }
+      &:last-child {
+        &::after { content: ''; }
+      }
+    }
+  }
+}
