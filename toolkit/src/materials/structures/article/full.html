@@ -1,61 +1,9 @@
-<!doctype html>
-<html class="grid-on">
-<head>
-
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title></title>
-
-	
-
-	<!-- toolkit styles -->
-	<link rel="stylesheet" href="../assets/toolkit/styles/toolkit.css">
-	<!-- /toolkit styles -->
-
-</head>
-<body>
-
-
-
-	
-<header class="header">
-  <h1 class="header__logo">
-    <i class="logo logo--white">Bereans at the Gate</i>
-  </h1>
-  <p class="header__tagline">
-    Engaging today's political economy <br/>
-    with truth and reason
-  </p>
-  <form class="header__search-form">
-    <input type="text" class="form-control"
-      placeholder="Looking for something?" />
-    <div class="input-group-append">
-      <button class="btn btn-primary" type="button" alt="Search">
-        <i class="icon icon--search icon--light icon--sm"></i>
-      </button>
-    </div>
-  </form>
-  <nav class="header__nav">
-    <ul>
-      <li class="nav-link__about"><a href="#">About</a></li>
-      <li class="nav-link__subscribe"><a href="#">Subscribe</a></li>
-    </ul>
-  </nav>
-  <ul class="header__social-media-links">
-    <li><a href="#"><i class="icon icon--twitter icon--light icon--lg"></i></a></li>
-    <li><a href="#"><i class="icon icon--facebook icon--light icon--lg"></i></a></li>
-  </ul>
-</header><article class="article article--full">
+<article class="article article--full">
   <header class="article__header">
     <h1>Article title</h1>
-    <p class="date">
-      <b class="date__day">23</b>
-      <b class="date__month">May</b>
-      <span class="date__year">2017</span>
-    </p>    <p class="author">
-      Dr. Mark Caleb Smith
-    </p>  </header>
+    {{> date }}
+    {{> authors.byline }}
+  </header>
   <main class="article__body">
     <p>The House Permanent Select Committee on Intelligence (HPSCI) memo on FISA abuse was, as expected, released today.  No matter how you slice it, this is an incredibly troubling memo.  No one can read this memo and say it doesn’t matter.  Either its true, and we have momentous scandal unfolding, or its not true, and the Republicans have fabricated incredible lies to cover up for Mr. Trump, or some combination thereof.  You can (and should) read the memo yourself, and I’m not going today to offer any analysis of the specific allegations.  But here are some thoughts to get the discussion going.  I’m not an expert, but I should note that I previously worked with the HPSCI while in Legislative Liaison in the Air Force, and was cleared for the type of information that would have been behind this.  So I’m somewhat familiar with the security protocols that would be involved.</p>
     <ul>
@@ -83,47 +31,6 @@
         <li><a href="#">Politics--General</a></li>
       </ul>
     </div>
-    <div class="comments">
-      <h2>Comments</h2>
-      <div class="comment">
-        <p>Comment text...
-      </div>  <div class="comment">
-        <p>Comment text...
-      </div>  <div class="comment">
-        <p>Comment text...
-      </div>  <div class="comment">
-        <p>Comment text...
-      </div>  <div class="comment">
-        <p>Comment text...
-      </div></div>  </footer>
-</article><footer class="footer">
-  <h1 class="footer__logo">
-    <i class="logo">Bereans at the Gate</i>
-  </h1>
-  <nav class="footer__nav">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Archives</a></li>
-      <li><a href="#">Subscribe</a></li>
-    </ul>
-  </nav>
-  <p class="footer__copyright">
-    Copyright &copy; 2018 by Bereans at the Gate. <br />
-    All rights reserved.
-  </p>
-  <p class="footer__cu-endorse">We proudly endorse <a href="http://cedarville.edu">Cedarville University</a></p>
-  <ul class="footer__social-media-links">
-    <li><a href="#"><i class="icon icon--twitter icon--lg"></i></a></li>
-    <li><a href="#"><i class="icon icon--facebook icon--lg"></i></a></li>
-  </ul>
-</footer>
-
-
-
-	<!-- toolkit scripts -->
-	<script src="../assets/toolkit/scripts/toolkit.js"></script>
-	<!-- /toolkit scripts -->
-
-</body>
-</html>
+    {{> comment.group }}
+  </footer>
+</article>

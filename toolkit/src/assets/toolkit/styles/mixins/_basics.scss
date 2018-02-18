@@ -1,10 +1,24 @@
 
-@mixin bbox {
+@mixin bbox() {
   box-sizing: border-box;
 }
 
-@mixin flex {
+@mixin flex() {
   display: flex;
+}
+
+@mixin col-pad($pad-both: $pad, $pad-left: false, $pad-right: false) {
+  @if ($pad-both == false) {
+    @if ($pad-left != false) {
+      padding-left: $pad-left;
+    }
+    @if ($pad-right != false) {
+      padding-right: $pad-right;
+    }
+  } @else {
+    padding-left: $pad-both;
+    padding-right: $pad-both;
+  }
 }
 
 @mixin type-setup(
@@ -23,4 +37,41 @@
     line-height: $leading;
     color: $color;
     font-family: $font;
+}
+
+@mixin list-inline() {
+  @include list-unstyled;
+  @extend .list-inline;
+  & > li {
+    @extend .list-inline-item;
+  }
+}
+
+@mixin list-unstyled() {
+  @extend .list-unstyled;
+}
+
+@mixin btn($type: false, $size: false) {
+  @extend .btn;
+  @if ($type != false) {
+    @extend .btn-#{$type};
+  }
+  @if ($size != false) {
+    @extend .btn-#{$size};
+  }
+}
+
+@mixin placeholder() {
+  &::-webkit-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &::-ms-placeholder {
+    @content;
+  }
+  &::placeholder {
+    @content;
+  }
 }

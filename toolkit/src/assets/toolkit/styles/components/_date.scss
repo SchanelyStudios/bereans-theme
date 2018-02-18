@@ -1,0 +1,65 @@
+.date {
+  height: $baseline * 4;
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 100px;
+  display: grid;
+  grid-template-columns: 45px auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "day month"
+    "day year";
+  position: relative;
+  &::after {
+    content:"";
+    width: 0;
+    height: 100%;
+    border-right: 2px solid $orange;
+    display: block;
+    position: absolute;
+    left: 45px;
+  }
+}
+
+.date__day {
+  grid-area: day;
+  font-size: 3.8rem;
+  @include type-setup(
+    $font: $font-family-condensed,
+    $color: $blue-brand,
+    $leading: $baseline,
+    $padding-top: 5px,
+    $padding-bottom: 0
+  );
+}
+
+.date__month {
+  grid-area: month;
+  font-size: $font-size-sm;
+  @include type-setup(
+    $font: $font-family-condensed,
+    $color: $blue-brand,
+    $leading: $baseline,
+    $padding-top: 7px,
+    $padding-bottom: 0
+  );
+  margin-top: 0px;
+  margin-left: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.date__year {
+  grid-area: year;
+  font-size: $font-size-sm;
+  @include type-setup(
+    $font: $font-family-condensed,
+    $color: $blue-brand,
+    $leading: $baseline,
+    $padding-top: 0px,
+    $padding-bottom: 0
+  );
+  margin-top: -3px;
+  margin-left: 10px;
+  font-weight: 300;
+}

@@ -1,0 +1,11 @@
+
+.nav-link__about {
+  & > a {
+    @include btn(primary);
+  }
+}
+.nav-link__subscribe {
+  & > a {
+    @include btn(success);
+  }
+}

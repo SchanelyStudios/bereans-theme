@@ -1,5 +1,5 @@
 .icon {
-    @extend .fas; 
+    @extend .fas;
     font-size: $size-icon;
     display: inline-block;
 
@@ -292,12 +292,12 @@
 
     &.icon--facebook {
         @include fab;
-        @extend .fa-facebook-f;
+        @extend .fa-facebook-square;
     }
 
     &.icon--twitter {
         @include fab;
-        @extend .fa-twitter;
+        @extend .fa-twitter-square;
     }
 
     &.icon--instagram {

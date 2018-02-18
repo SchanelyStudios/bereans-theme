@@ -1,0 +1,20 @@
+
+.logo {
+  display: block;
+  margin: 0;
+  text-indent: -9999px;
+  width: 89px;
+  height: 84px;
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url('../images/logo-md-blue.png');
+  @include media-breakpoint-up(lg) {
+    width: 111px;
+    height: 105px;
+  }
+}
+
+.logo--white {
+  background-image: url('../images/logo-md-white.png');
+}
