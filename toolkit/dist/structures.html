@@ -125,6 +125,9 @@
 							<a href="structures.html#form-signup">Form Signup</a>
 						</li>
 						<li>
+							<a href="structures.html#recommended-readings">Recommended Readings</a>
+						</li>
+						<li>
 							<a href="structures.html#videos">Videos</a>
 						</li>
 					</ul>
@@ -333,7 +336,7 @@
 				</div>
 			</div>
 <div class="f-item-preview">
-	<article class="article article--full">
+	<article class="main article article--full">
 	<header class="article__header">
 		<h1 class="article__title">Article title that is way longer than a stinking title should ever be</h1>
 		<p class="date">
@@ -494,7 +497,7 @@
 </article>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;article class&#x3D;&quot;article article--full&quot;&gt;
+	<pre><code class="language-markup">&lt;article class&#x3D;&quot;main article article--full&quot;&gt;
 	&lt;header class&#x3D;&quot;article__header&quot;&gt;
 		&lt;h1 class&#x3D;&quot;article__title&quot;&gt;Article title that is way longer than a stinking title should ever be&lt;/h1&gt;
 		&lt;p class&#x3D;&quot;date&quot;&gt;
@@ -742,10 +745,74 @@
 				</div>
 			</div>
 <div class="f-item-preview">
-	
+	<div class="authors">
+	<h2>Authors</h2>
+	<ul>
+		<li class="author author--item">
+			<a href="#">
+        <img class="author__image" src="http://placehold.it/36x36" />
+        <b class="author__name">Dr. Mark Caleb Smith</b>
+      </a>
+			<a href="#" class="author__articles-link btn btn-primary btn-sm">Articles</a>
+		</li>
+		<li class="author author--item">
+			<a href="#">
+        <img class="author__image" src="http://placehold.it/36x36" />
+        <b class="author__name">Dr. Mark Caleb Smith</b>
+      </a>
+			<a href="#" class="author__articles-link btn btn-primary btn-sm">Articles</a>
+		</li>
+		<li class="author author--item">
+			<a href="#">
+        <img class="author__image" src="http://placehold.it/36x36" />
+        <b class="author__name">Dr. Mark Caleb Smith</b>
+      </a>
+			<a href="#" class="author__articles-link btn btn-primary btn-sm">Articles</a>
+		</li>
+		<li class="author author--item">
+			<a href="#">
+        <img class="author__image" src="http://placehold.it/36x36" />
+        <b class="author__name">Dr. Mark Caleb Smith</b>
+      </a>
+			<a href="#" class="author__articles-link btn btn-primary btn-sm">Articles</a>
+		</li>
+	</ul>
+</div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup"></code></pre>
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;authors&quot;&gt;
+	&lt;h2&gt;Authors&lt;/h2&gt;
+	&lt;ul&gt;
+		&lt;li class&#x3D;&quot;author author--item&quot;&gt;
+			&lt;a href&#x3D;&quot;#&quot;&gt;
+        &lt;img class&#x3D;&quot;author__image&quot; src&#x3D;&quot;http://placehold.it/36x36&quot; /&gt;
+        &lt;b class&#x3D;&quot;author__name&quot;&gt;Dr. Mark Caleb Smith&lt;/b&gt;
+      &lt;/a&gt;
+			&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;author__articles-link btn btn-primary btn-sm&quot;&gt;Articles&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li class&#x3D;&quot;author author--item&quot;&gt;
+			&lt;a href&#x3D;&quot;#&quot;&gt;
+        &lt;img class&#x3D;&quot;author__image&quot; src&#x3D;&quot;http://placehold.it/36x36&quot; /&gt;
+        &lt;b class&#x3D;&quot;author__name&quot;&gt;Dr. Mark Caleb Smith&lt;/b&gt;
+      &lt;/a&gt;
+			&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;author__articles-link btn btn-primary btn-sm&quot;&gt;Articles&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li class&#x3D;&quot;author author--item&quot;&gt;
+			&lt;a href&#x3D;&quot;#&quot;&gt;
+        &lt;img class&#x3D;&quot;author__image&quot; src&#x3D;&quot;http://placehold.it/36x36&quot; /&gt;
+        &lt;b class&#x3D;&quot;author__name&quot;&gt;Dr. Mark Caleb Smith&lt;/b&gt;
+      &lt;/a&gt;
+			&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;author__articles-link btn btn-primary btn-sm&quot;&gt;Articles&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li class&#x3D;&quot;author author--item&quot;&gt;
+			&lt;a href&#x3D;&quot;#&quot;&gt;
+        &lt;img class&#x3D;&quot;author__image&quot; src&#x3D;&quot;http://placehold.it/36x36&quot; /&gt;
+        &lt;b class&#x3D;&quot;author__name&quot;&gt;Dr. Mark Caleb Smith&lt;/b&gt;
+      &lt;/a&gt;
+			&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;author__articles-link btn btn-primary btn-sm&quot;&gt;Articles&lt;/a&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
 		</div>
@@ -1296,31 +1363,116 @@
 </div>
 
 
-<div class="f-item-group" id="videos">
+<div class="f-item-group" id="recommended-readings">
 
-	<div class="f-item-heading-group">
-		<h2 class="f-item-heading" data-f-toggle="labels">Videos</h2>
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Recommended Readings</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
 	</div>
-		<div class="f-item-group" id="videos.side-bar">
-			<div class="f-item-heading-group" data-f-toggle="labels">
-				<h3 class="f-item-heading">Side Bar</h3>
-				<div class="f-item-controls">
-					
-					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-						<svg>
-							<use xlink:href="#f-icon-code" />
-						</svg>
-					</span>
-				</div>
-			</div>
 <div class="f-item-preview">
-	
+	<div class="recommended-reading">
+	<h2>Recommended Reading</h2>
+	<ul>
+		<li><a href="#">
+      <b class="reading__title">Lorem Ipsum Dolor Sit</b>
+      <i class="reading__date-source">Jun 23, 2017 | Washington Post</i>
+    </a></li>
+		<li><a href="#">
+      <b class="reading__title">Amet Hipsum Voluptum it Granium</b>
+      <i class="reading__date-source">Jun 23, 2017 | Washington Post</i>
+    </a></li>
+		<li><a href="#">
+      <b class="reading__title">Praesent faucibus lectus sit amet sollicitudin venenatis</b>
+      <i class="reading__date-source">Jun 23, 2017 | Washington Post</i>
+    </a></li>
+		<li><a href="#">
+      <b class="reading__title">Quisque accumsan lectus ut dolor fermentum facilisis vel venenatis dui</b>
+      <i class="reading__date-source">Jun 23, 2017 | Washington Post</i>
+    </a></li>
+	</ul>
+</div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup"></code></pre>
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;recommended-reading&quot;&gt;
+	&lt;h2&gt;Recommended Reading&lt;/h2&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;
+      &lt;b class&#x3D;&quot;reading__title&quot;&gt;Lorem Ipsum Dolor Sit&lt;/b&gt;
+      &lt;i class&#x3D;&quot;reading__date-source&quot;&gt;Jun 23, 2017 | Washington Post&lt;/i&gt;
+    &lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;
+      &lt;b class&#x3D;&quot;reading__title&quot;&gt;Amet Hipsum Voluptum it Granium&lt;/b&gt;
+      &lt;i class&#x3D;&quot;reading__date-source&quot;&gt;Jun 23, 2017 | Washington Post&lt;/i&gt;
+    &lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;
+      &lt;b class&#x3D;&quot;reading__title&quot;&gt;Praesent faucibus lectus sit amet sollicitudin venenatis&lt;/b&gt;
+      &lt;i class&#x3D;&quot;reading__date-source&quot;&gt;Jun 23, 2017 | Washington Post&lt;/i&gt;
+    &lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;
+      &lt;b class&#x3D;&quot;reading__title&quot;&gt;Quisque accumsan lectus ut dolor fermentum facilisis vel venenatis dui&lt;/b&gt;
+      &lt;i class&#x3D;&quot;reading__date-source&quot;&gt;Jun 23, 2017 | Washington Post&lt;/i&gt;
+    &lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
+
+</div>
+
+
+<div class="f-item-group" id="videos">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Videos</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
 		</div>
+	</div>
+<div class="f-item-preview">
+	<div class="videos">
+	<h2>Videos</h2>
+	<a class="videes__preview" href="#">
+    <i class="icon icon--play icon--xxl icon--light"></i>
+    <i class="icon icon--youtube icon--lg icon--light"></i>
+  </a>
+	<ul class="videos__recent-list">
+		<li><a href="#"><i class="icon icon--play icon--xs"></i>Video name</a></li>
+		<li><a href="#"><i class="icon icon--play icon--xs"></i>Video name</a></li>
+		<li><a href="#"><i class="icon icon--play icon--xs"></i>Video name</a></li>
+		<li><a href="#"><i class="icon icon--play icon--xs"></i>Video name</a></li>
+	</ul>
+	<p class="videos__more-link"><a href="#">View more...</a></p>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;videos&quot;&gt;
+	&lt;h2&gt;Videos&lt;/h2&gt;
+	&lt;a class&#x3D;&quot;videes__preview&quot; href&#x3D;&quot;#&quot;&gt;
+    &lt;i class&#x3D;&quot;icon icon--play icon--xxl icon--light&quot;&gt;&lt;/i&gt;
+    &lt;i class&#x3D;&quot;icon icon--youtube icon--lg icon--light&quot;&gt;&lt;/i&gt;
+  &lt;/a&gt;
+	&lt;ul class&#x3D;&quot;videos__recent-list&quot;&gt;
+		&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;icon icon--play icon--xs&quot;&gt;&lt;/i&gt;Video name&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;icon icon--play icon--xs&quot;&gt;&lt;/i&gt;Video name&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;icon icon--play icon--xs&quot;&gt;&lt;/i&gt;Video name&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;icon icon--play icon--xs&quot;&gt;&lt;/i&gt;Video name&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;p class&#x3D;&quot;videos__more-link&quot;&gt;&lt;a href&#x3D;&quot;#&quot;&gt;View more...&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
 
 </div>
 

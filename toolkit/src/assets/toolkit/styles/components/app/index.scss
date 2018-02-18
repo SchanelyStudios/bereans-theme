@@ -2,3 +2,25 @@
 @import 'footer';
 @import 'logo';
 @import 'nav';
+
+.header,
+.main,
+.sidebar,
+.footer {
+  width: 100%;
+}
+
+@include media-breakpoint-up(md) {
+
+  body {
+    display:flex;
+    flex-flow: row wrap;
+  }
+
+  .main {
+    width: 2/3 * 100%;
+  }
+  .sidebar {
+    width: 1/3 * 100%;
+  }
+}
