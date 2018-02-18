@@ -1,76 +1,54 @@
 $brand-img-width: 64px;
 
-.app-header {
-    @extend .navbar;
-    @extend .navbar-expand;
-    @extend .navbar-dark;
-    background-color: $gray-900;
-    height: $baseline * 4;
+.header {
+    opacity: 0.5;
     padding-left: $gutter / 2;
     padding-right: $gutter / 2;
-
-    .brand {
-        @extend .navbar-brand;
-    }
-
-    .brand--img-rpl {
-        .brand__img {
-            display: none;
-        }
-    }
-
-    .brand__img {
-        display: none;
-        width: $brand-img-width;
-    }
-
-    nav {
-        @extend .collapse;
-        @extend .navbar-collapse;
-        & > ul {
-            @extend .navbar-nav;
-            @extend .mr-auto;
-            & > li {
-                @extend .nav-item;
-                padding-top: 0;
-                padding-bottom: 0;
-                & > a {
-                    @extend .nav-link;
-                    padding-top: 6px;
-                    padding-left: $gutter/2;
-                    padding-right: $gutter/2;
-                }
-            }
-        }
-    }
-
-    @include media-breakpoint-up(md) {
-        height: $baseline * 6;
-        
-        .brand {
-            padding-top: $baseline;
-        }
-        .brand--img-rpl {
-            background: url('../images/logo.svg') top left no-repeat;
-            background-size: $brand-img-width;
-            padding-left: $brand-img-width + $gutter / 2;
-            height: $baseline * 4 + 3px;
-        	.brand__img {
-        		display: none;
-        	}
-        }
-        .brand__img { 
-            display: inline-block;
-            margin-top: -8px;
-            margin-right: $gutter / 2;
-        }
-        nav >ul >li >a {
-            padding-top: 16px;
-        }
-
-    }
+    background-color: $blue-brand;
 }
 
-.app-footer {
+.header__tagline {
+  @extend .lead;
+  font-style: italic;
+  color: $blue;
+  display: none;
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+}
 
+.header__nav {
+  & > ul {
+    @extend .list-inline;
+    & > li {
+      @extend .list-inline-item;
+      padding-top: 0;
+      padding-bottom: 0;
+      & > a {
+        @extend .btn;
+        @extend .btn-primary;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $gray-200;
+}
+
+.logo {
+  text-indent: -9999px;
+  width: 89px;
+  height: 84px;
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url('../images/logo-md-blue.png');
+  @include media-breakpoint-up(lg) {
+    width: 111px;
+    height: 105px;
+  }
+}
+.logo--white {
+  background-image: url('../images/logo-md-white.png');
 }

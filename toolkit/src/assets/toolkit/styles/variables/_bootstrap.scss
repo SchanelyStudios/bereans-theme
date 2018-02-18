@@ -22,7 +22,7 @@ $teal:    #2DC9BD;
 $colors: ("blue-brand": $blue-brand);
 $colors: map-remove($colors, "cyan", "pink", "indigo");
 
-$primary: $blue-brand;
+$primary: $blue;
 $secondary: $orange;
 $info: $teal;
 $dark: $gray;
@@ -167,8 +167,7 @@ $btn-border-radius:           0;
 $btn-border-radius-lg:        0;
 $btn-border-radius-sm:        0;
 
-
-$label-margin-bottom:                      0;
+$label-margin-bottom:         0;
 
 // $input-padding-y:                       $input-btn-padding-y !default;
 // $input-padding-x:                       $input-btn-padding-x !default;
