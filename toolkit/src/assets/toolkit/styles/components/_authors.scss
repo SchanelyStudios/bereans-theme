@@ -3,3 +3,47 @@
 .author--byline {
   @extend .h6;
 }
+
+.author--item {
+  @include flex;
+  justify-content: space-between;
+}
+
+.author__image {
+  margin-right: $pad / 2;
+}
+
+.authors {
+  @include col-pad;
+  ul {
+    @include list-unstyled;
+    li {
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-bottom: $baseline;
+    }
+
+    @include media-breakpoint-up(sm) {
+      @include flex;
+      flex-flow: column wrap;
+      height: $baseline * 12;
+      margin-left: -1 * $pad;
+      margin-right: -1 * $pad;
+      li {
+        @include col-pad;
+        width: 50%;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+      height: auto;
+      margin-left: 0;
+      margin-right: 0;
+      li {
+        @include col-pad(0);
+        width: 100%;
+      }
+    }
+  }
+}

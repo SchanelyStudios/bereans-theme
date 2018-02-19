@@ -1,0 +1,15 @@
+.recommended-reading {
+  margin-top: $baseline;
+  @include col-pad;
+  ul {
+    @include list-unstyled;
+  }
+}
+
+.reading__title {
+  display: block;
+}
+.reading__date-source {
+  display: block;
+  color: $gray-600;
+}
