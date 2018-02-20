@@ -12,7 +12,9 @@
   <body>
     <header class="header">
     	<h1 class="header__logo">
-    		<i class="logo logo--white"><?php wp_title(); ?></i>
+        <a href="<?php bloginfo('url'); ?>">
+      		<i class="logo logo--white"><?php wp_title(); ?></i>
+        </a>
     	</h1>
     	<p class="header__tagline">
     		Engaging today's political economy <br/> with truth and reason

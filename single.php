@@ -17,10 +17,14 @@
     <footer class="article__footer">
       <div class="tags">
   			<p>Posted in:</p>
-  			<ul>
-  				<li><a href="#">Politics--General</a></li>
-  				<li><a href="#">Crony capitalism</a></li>
-  			</ul>
+        <?php the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); ?>
+        <!-- <ul>
+          <?php wp_list_categories( array(
+              'orderby' => 'name'
+          ) ); ?>
+        </ul> -->
+
+        <?php echo get_the_category_list(); ?>
   		</div>
   		<div class="comments">
   			<h2>Comments on this post</h2>

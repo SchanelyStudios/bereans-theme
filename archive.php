@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 <main class="main">
-  <h2>Archives</h2>
-  <ul class="list-unstyled">
+  <h2 class="page-title">Archives</h2>
+  <ul class="article-list">
 
     <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
-    <li class="article artile--short">
+    <li class="article article--short">
       <div class="article__header">
-        <h3 class="h2"><a href="<?php the_permalink() ?>"><?php the_title();?></a></h3>
+        <h3 class="article__title"><a href="<?php the_permalink() ?>"><?php the_title();?></a></h3>
         <p class="date">
           <b class="date__day"><?php echo get_the_date('d'); ?></b>
           <b class="date__month"><?php echo get_the_date('M'); ?></b>

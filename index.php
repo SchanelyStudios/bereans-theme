@@ -1,8 +1,6 @@
 <?php get_header(); ?>
 <main class="main">
-  <h2>Recent Articles</h2>
-  <ul class="list-unstyled">
-
+  <ul class="article-list">
     <?php
       $args = array(
         'posts_per_page' => 2
@@ -11,9 +9,9 @@
     ?>
     <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
-    <li class="article artile--featured">
+    <li class="article article--featured">
       <div class="article__header">
-        <h3 class="h2"><a href="<?php the_permalink() ?>"><?php the_title();?></a></h3>
+        <h3 class="article__title"><a href="<?php the_permalink() ?>"><?php the_title();?></a></h3>
         <p class="date">
           <b class="date__day"><?php echo get_the_date('d'); ?></b>
           <b class="date__month"><?php echo get_the_date('M'); ?></b>
@@ -35,9 +33,9 @@
     ?>
     <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
-    <li class="article artile--short">
+    <li class="article article--short">
       <div class="article__header">
-        <h3 class="h2"><a href="<?php the_permalink() ?>"><?php the_title();?></a></h3>
+        <h3 class="article__title"><a href="<?php the_permalink() ?>"><?php the_title();?></a></h3>
         <p class="date">
           <b class="date__day"><?php echo get_the_date('d'); ?></b>
           <b class="date__month"><?php echo get_the_date('M'); ?></b>

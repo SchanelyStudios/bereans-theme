@@ -1,4 +1,9 @@
-.article {
+.article {}
+
+.article--full {
+  h1 {
+    @extend .h2;
+  }
   h2 {
     @extend .h3;
   }
@@ -11,14 +16,40 @@
   h5 {
     @extend .h6;
   }
-
 }
 
-.article--full {}
+.article--short {
 
-.article--short {}
+  padding-top: 0;
+  padding-bottom: 0;
 
-.article--short-featured {}
+  .article__title {
+    @extend .h3;
+    margin-top: $baseline * 2 - 6px;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 50%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .article__header .author,
+    .article__body {
+      margin-left: 0;
+    }
+  }
+}
+
+.article--short-featured {
+
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .article__title {
+    @extend .h2;
+    margin-top: $baseline * 2;
+  }
+}
 
 
 .article__body {
@@ -57,6 +88,11 @@
   padding-left: $pad;
 }
 
+.article-list {
+  @include list-unstyled;
+  @include flex;
+  flex-flow: row wrap;
+}
 
 @include media-breakpoint-up(lg) {
   .article__header .author {
