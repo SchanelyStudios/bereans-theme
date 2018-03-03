@@ -23,6 +23,9 @@ module.exports = function(fabricatorConfig) {
 				}
 			]
 		},
+		node: {
+			fs: 'empty'
+		},
 		plugins: [],
 		cache: {}
 	};

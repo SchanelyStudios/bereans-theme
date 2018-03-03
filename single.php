@@ -19,28 +19,15 @@
   			<p>Posted in:</p>
         <?php echo get_the_category_list(); ?>
   		</div>
-
-      <?php wp_list_comments( array(
-    'callback' => '')); ?>
-  		<div class="comments">
-  			<h2>Comments on this post</h2>
-  			<div class="comment">
-  				<div class="comment__head">
-  					<img src="http://placehold.it/36x36" class="user-image" />
-  					<p class="user-name">
-  						Commenting username
-  					</p>
-  					<p class="comment__post-date">11:08 am on Feb 2, 2018</p>
-  				</div>
-  				<div class="comment__body">
-  					<p>It’s a very interesting case: Bombardier has been heavily subsidized already by the Canadian government and sold their planes under cost, which I believe was the source of Boeing’s complaint: Are you against anti-dumping legislation? I don’t know
-  						that this is a good case study in the practice, but usually we’re wary of these kinds of pricing policies out of fear of monopolization. It’s a bit of a bitter pill if we’re just trading one crony for another, albeit a much smaller one.</p>
-  				</div>
-  				<p class="comment__reply-link"><a href="#"><i class="icon icon--reply icon--sm"></i> Reply</a></p>
-  				<ul class="comment__replies">
-  					<li>replies...</li>
-  				</ul>
-  			</div>
+      <div class="comments">
+        <h2>Comments on this post</h2>
+        <?php
+        if ( comments_open() ) :
+          comments_template();
+        else :
+          echo 'Cheese! <br />';
+        endif;
+        ?>
       </div>
     </footer>
     <?php endwhile; ?>
