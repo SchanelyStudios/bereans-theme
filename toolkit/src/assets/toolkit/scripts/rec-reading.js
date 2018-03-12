@@ -2,6 +2,7 @@
 
 var $ = require('jquery');
 var Handlebars = require('handlebars');
+require('datejs');
 
 function RecReading() {
 
@@ -9,32 +10,7 @@ function RecReading() {
 	this.newsapi = null;
 
 	this.data = {
-		items: [
-			{
-				title: 'Lorem Ipsum Dolor Sit Galopogos',
-				date: 'Jun 23, 2017',
-				source: 'Washington Post',
-				url: 'http://example.com/1'
-			},
-			{
-				title: 'Amet Hipsum Voluptum it Granium',
-				date: 'Jun 23, 2017',
-				source: 'Washington Post',
-				url: 'http://example.com/2'
-			},
-			{
-				title: 'Praesent faucibus lectus sit amet sollicitudin venenatis',
-				date: 'Jun 23, 2017',
-				source: 'Washington Post',
-				url: 'http://example.com/3'
-			},
-			{
-				title: 'Quisque accumsan lectus ut dolor fermentum facilisis vel venenatis dui',
-				date: 'Jun 23, 2017',
-				source: 'Washington Post',
-				url: 'http://example.com/4'
-			},
-		]
+		items: []
 	};
 
 	this.itemsTemplateStr = '\
@@ -56,18 +32,35 @@ function RecReading() {
 
 
 	this.initialize = function() {
-		console.log('init rr');
-		console.log(this.itemsTemplateStr);
 		this.itemsTemplateCompiled = Handlebars.compile(this.itemsTemplateStr);
-		console.log(this.itemsErrorStr);
 		this.itemsErrorCompiled = Handlebars.compile(this.itemsErrorStr);
 		this.loadReadings();
 	};
 
 	this.loadReadings = function() {
 		console.log('load readings');
-		var data = this.data;
-		this.displayReadings(data);
+		let root = this;
+		$.get('https://bereans-readings.firebaseio.com/articles.json', function(data){
+			let articles = [];
+			let i = 0;
+			for (let id in data) {
+				let article = data[id];
+				articles.push({
+					id: id,
+					title: article.title,
+					author: article.author,
+					source: article.source,
+					url: article.url,
+					date: Date.parse(article.date).toString('MMM d, yyyy'),
+				})
+				i = i + 1;
+				if (i === 5) {
+					break;
+				}
+			}
+			root.displayReadings({ items: articles });
+		});
+
 	}
 
 	this.displayReadings = function(data) {
