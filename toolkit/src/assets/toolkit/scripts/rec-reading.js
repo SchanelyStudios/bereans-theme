@@ -1,6 +1,7 @@
 'use strict';
 
 var $ = require('jquery');
+var _ = require('lodash');
 var Handlebars = require('handlebars');
 require('datejs');
 
@@ -8,6 +9,7 @@ function RecReading() {
 
 	this.key = '02648d661f7f44dfba038f182e973f62';
 	this.newsapi = null;
+	this.limitTo = 0;
 
 	this.data = {
 		items: []
@@ -30,8 +32,9 @@ function RecReading() {
 		</p> \
 	';
 
-
 	this.initialize = function() {
+		var $list = $('#rr-list');
+		this.limitTo = $list.attr('data-limit') ? $list.attr('data-limit') : 0;
 		this.itemsTemplateCompiled = Handlebars.compile(this.itemsTemplateStr);
 		this.itemsErrorCompiled = Handlebars.compile(this.itemsErrorStr);
 		this.loadReadings();
@@ -42,7 +45,6 @@ function RecReading() {
 		let root = this;
 		$.get('https://bereans-readings.firebaseio.com/articles.json', function(data){
 			let articles = [];
-			let i = 0;
 			for (let id in data) {
 				let article = data[id];
 				articles.push({
@@ -52,20 +54,27 @@ function RecReading() {
 					source: article.source,
 					url: article.url,
 					date: Date.parse(article.date).toString('MMM d, yyyy'),
+					dateTS: Date.parse(article.date).toString('s')
 				})
-				i = i + 1;
-				if (i === 5) {
-					break;
-				}
 			}
-			root.displayReadings({ items: articles });
+			let sortedArticles = _.orderBy(data, ['dateTS', 'title'], ['desc', 'asc']);
+			root.displayReadings(sortedArticles);
 		});
 
 	}
 
 	this.displayReadings = function(data) {
-		console.table(data.items);
-		var itemsTemplate = this.itemsTemplateCompiled(data);
+		this.data = {
+			items: []
+		};
+		if (this.limitTo > 0) {
+			for (var i = 0; i < this.limitTo; i++) {
+				this.data.items.push(data[i]);
+			}
+		} else {
+			this.data.items = data;
+		}
+		var itemsTemplate = this.itemsTemplateCompiled(this.data);
 		$('#rr-list').html(itemsTemplate);
 	}
 

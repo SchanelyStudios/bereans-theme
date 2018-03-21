@@ -5,3 +5,7 @@
 .page--fluid {
     @extend .container-fluid;
 }
+
+.page-title {
+	@include col-pad;
+}
