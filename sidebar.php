@@ -11,11 +11,11 @@
   </div>
   <div class="recommended-reading">
     <h2>Recommended Reading</h2>
-    <div id="rr-list">
+    <div id="rr-list" data-limit="5">
       <p>Loading reading list...</p>
     </div>
     <p class="reading__more-link">
-      <a href="#" class="btn btn-block btn-primary">View More</a>
+      <a href="/recommended-reading" class="btn btn-block btn-primary">View More</a>
     </p>
   </div>
   <div class="authors">
