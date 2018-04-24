@@ -29,6 +29,17 @@ label {
     $padding-top: 6px,
     $padding-bottom: 6px
   );
+  min-width: 100px;
+}
+
+input[type="text"],
+textarea {
+	border: 1px solid $gray-200;
+	font-family: $font-family-sans-serif;
+	color: $gray;
+	padding: 4px 5px 0px;
+	min-height: $baseline * 3;
+	flex: 1;
 }
 
 input[type="radio"] {
