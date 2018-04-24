@@ -2,3 +2,7 @@
 @import 'footer';
 @import 'logo';
 @import 'nav';
+
+.sidebar h2 {
+	color: $secondary;
+}

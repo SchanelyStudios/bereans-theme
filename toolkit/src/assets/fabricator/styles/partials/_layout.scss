@@ -3,6 +3,9 @@ html {
 
 	&.f-menu-active {
 		overflow: hidden;
+		body {
+			max-width: 100%;
+		}
 
 		@media (min-width: 60em) {
 			overflow: auto;

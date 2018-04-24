@@ -15,6 +15,8 @@
 
 .authors {
   @include col-pad;
+  margin-top: $baseline * 2;
+  margin-bottom: $baseline * 2;
   ul {
     @include list-unstyled;
     li {

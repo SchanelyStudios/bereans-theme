@@ -6,7 +6,7 @@
       <p>Loading video list...</p>
     </div>
     <p class="videos__more-link">
-      <a href="https://www.youtube.com/playlist?list=PLDW2KGBu7aPOACjEKY_WJFgtKrjTVN8G0" class="btn btn-block btn-primary">View playlist</a>
+      <a href="https://www.youtube.com/playlist?list=PLDW2KGBu7aPOACjEKY_WJFgtKrjTVN8G0" class="btn btn-block btn-success">View playlist</a>
     </p>
   </div>
   <div class="recommended-reading">
@@ -15,7 +15,7 @@
       <p>Loading reading list...</p>
     </div>
     <p class="reading__more-link">
-      <a href="/recommended-reading" class="btn btn-block btn-primary">View More</a>
+      <a href="/recommended-reading" class="btn btn-block btn-success">View More</a>
     </p>
   </div>
   <div class="authors">
