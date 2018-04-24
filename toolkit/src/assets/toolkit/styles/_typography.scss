@@ -14,9 +14,10 @@ address {
 blockquote {
 	padding: 6px $gutter;
 	margin: 0;
-  position: relative;
-  border-left: none;
+    position: relative;
+    border-left: none;
 	p {
+        font-style: italic;
 		&:first-of-type {
 			margin-top: 0;
 			padding-top: 0;
@@ -31,7 +32,7 @@ blockquote {
 				content: "\201D";
 				font-size: $h1-font-size;
 				line-height: 0;
-				vertical-align: -18px;
+				vertical-align: -14px;
 				color: theme-color('mid-dark');
 			}
 		}
@@ -40,8 +41,8 @@ blockquote {
 		content: "\201C";
 		position: absolute;
 		font-size: $h1-font-size;
-		top: 17px;
-		left: 18px;
+		top: 1px;
+		left: 15px;
         color: theme-color('mid-dark');
         font-weight: 400;
 	}
