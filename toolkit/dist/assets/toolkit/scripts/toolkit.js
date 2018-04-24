@@ -15505,13 +15505,12 @@
 		};
 
 		this.loadReadings = function () {
-			console.log('load readings');
 			var root = this;
 			$.get('https://bereans-readings.firebaseio.com/articles.json', function (data) {
 				var articles = [];
 				for (var id in data) {
 					var article = data[id];
-					articles.push({
+					var cleanArticle = {
 						id: id,
 						title: article.title,
 						author: article.author,
@@ -15519,9 +15518,10 @@
 						url: article.url,
 						date: Date.parse(article.date).toString('MMM d, yyyy'),
 						dateTS: Date.parse(article.date).toString('s')
-					});
+					};
+					articles.push(cleanArticle);
 				}
-				var sortedArticles = _.orderBy(data, ['dateTS', 'title'], ['desc', 'asc']);
+				var sortedArticles = _.orderBy(articles, ['dateTS', 'title'], ['desc', 'asc']);
 				root.displayReadings(sortedArticles);
 			});
 		};

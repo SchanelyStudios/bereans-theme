@@ -41,13 +41,12 @@ function RecReading() {
 	};
 
 	this.loadReadings = function() {
-		console.log('load readings');
 		let root = this;
 		$.get('https://bereans-readings.firebaseio.com/articles.json', function(data){
 			let articles = [];
 			for (let id in data) {
 				let article = data[id];
-				articles.push({
+				let cleanArticle = {
 					id: id,
 					title: article.title,
 					author: article.author,
@@ -55,9 +54,10 @@ function RecReading() {
 					url: article.url,
 					date: Date.parse(article.date).toString('MMM d, yyyy'),
 					dateTS: Date.parse(article.date).toString('s')
-				})
+				};
+				articles.push(cleanArticle);
 			}
-			let sortedArticles = _.orderBy(data, ['dateTS', 'title'], ['desc', 'asc']);
+			let sortedArticles = _.orderBy(articles, ['dateTS', 'title'], ['desc', 'asc']);
 			root.displayReadings(sortedArticles);
 		});
 
