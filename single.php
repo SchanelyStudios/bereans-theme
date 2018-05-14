@@ -21,13 +21,11 @@
   		</div>
       <div class="comments">
         <h2>Comments on this post</h2>
-        <?php
-        if ( comments_open() ) :
-          comments_template();
-        else :
-          echo 'Cheese! <br />';
-        endif;
-        ?>
+        <?php if ( comments_open() ) : ?>
+        <?php comments_template(); ?>
+        <?php else : ?>
+        <p>Commenting is not allowed at this time.</p>
+        <?php endif; ?>
       </div>
     </footer>
     <?php endwhile; ?>
