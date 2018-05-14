@@ -1,7 +1,7 @@
 .footer {
   margin-top: $baseline * 4;
+  padding: ($baseline * 2) 0;
   background-color: $gray-200;
-  height: $baseline * 30;
 }
 
 .footer__copyright {
@@ -9,21 +9,17 @@
   margin-top: $baseline;
 }
 
-.footer__cu-endorse {
-  text-align: center;
-  margin-top: $baseline;
-}
-
 .footer__logo {
-  margin: $baseline + 10px auto;
-  width: 89px;
+  padding-top: 0;
+  margin: 0 auto;
+  width: 100px;
   @include media-breakpoint-up(lg) {
-	  width: 111px;
+	width: 120px;
   }
 }
 
 .footer__nav {
-  margin-top: 5px;
+  margin-top: $baseline + 3px;
   ul {
     width: 164px;
     @include list-inline;
@@ -39,57 +35,57 @@
   width: 64px;
 }
 
+.footer__sponsorship {
+  text-align: center;
+  margin-top: $baseline;
+  color: $blue-brand;
+  .cu-logo {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 4px;
+  }
+}
+
 @include media-breakpoint-up(sm) {
   .footer {
-    height: $baseline * 18;
     display: grid;
-    grid-template-columns: 130px 1fr auto;
-    grid-template-rows: ($baseline * 6);
+    grid-template-columns: 140px 1fr auto;
+	grid-template-rows: ($baseline * 4) ($baseline * 5) auto;
     grid-template-areas:
-      "logo nav       social-media"
-      "logo copyright cu-endorse"
+	  "logo      nav          sponsorship"
+      "logo      social-media sponsorship"
+      "copyright copyright    copyright";
   }
   .footer__logo {
     grid-area: logo;
+	width: 100%;
     @include col-pad;
     margin-left: 0;
     margin-right: 0;
-    width: 130px;
+	margin-top: 0;
   }
   .footer__nav {
     grid-area: nav;
-    @include col-pad;
-    margin-top: $baseline * 3;
-    ul {
-      margin-left: 0;
-      margin-right: 0;
-    }
+	margin-top: 17px;
   }
   .footer__copyright {
     grid-area: copyright;
     @include col-pad;
-    text-align: left;
-    margin-top: 0;
-    br { display: none;}
+    text-align: center;
+    margin-top: $baseline;
+    br { display: none; }
   }
-  .footer__cu-endorse {
-    grid-area: cu-endorse;
+  .footer__sponsorship {
+    grid-area: sponsorship;
     @include col-pad;
-    text-align: right;
-	margin-top: 0;
+    margin-top: 16px;
   }
   .footer__social-media-links {
-	margin-top: $baseline * 3;
     grid-area: social-media;
+  	margin-top: 0px;
 	width: 64px + $gutter;
     @include col-pad;
-    margin-right: 0;
   }
-}
-@include media-breakpoint-up(md) {
-  // .footer__cu-endorse {
-  //   margin-top: $baseline * 3;
-  // }
 }
 @include media-breakpoint-up(lg) {
   .footer {

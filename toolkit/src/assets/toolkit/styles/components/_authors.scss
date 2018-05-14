@@ -4,13 +4,23 @@
   @extend .h6;
 }
 
+.author__articles-link {
+  margin-top: 6px;
+}
+
+.author__image {
+  margin-right: $pad / 2;
+}
+
 .author--item {
   @include flex;
   justify-content: space-between;
 }
 
-.author__image {
-  margin-right: $pad / 2;
+.author__name {
+  display: inline-block;
+  position: relative;
+  top: 2px;
 }
 
 .authors {

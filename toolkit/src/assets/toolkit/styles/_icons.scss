@@ -51,6 +51,10 @@
         color: $blue;
     }
 
+	&.icon--bright {
+		color: $blue-lt;
+	}
+
     &.icon--danger {
         color: $red;
     }

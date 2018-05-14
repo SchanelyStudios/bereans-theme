@@ -3,18 +3,34 @@
   display: block;
   margin: 0;
   text-indent: -9999px;
-  width: 89px;
-  height: 84px;
+  width: 100px;
+  height: 91px;
   background-position: top center;
   background-size: 100%;
   background-repeat: no-repeat;
-  background-image: url('../images/logo-md-blue.png');
-  @include media-breakpoint-up(lg) {
-    width: 111px;
-    height: 105px;
+  background-image: url('../images/logo-md-blue.svg');
+  @include media-breakpoint-up(md) {
+    width: 120px;
+    height: 109px;
   }
 }
-
 .logo--white {
-  background-image: url('../images/logo-md-white.png');
+  background-image: url('../images/logo-md-white.svg');
+}
+
+.cu-logo {
+  display: block;
+  margin: 0;
+  text-indent: -9999px;
+  width: 184px;
+  height: 46px;
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url('../images/cu-logo-blue.svg');
+}
+.cu-logo--white {
+  width: 144px;
+  height: 36px;
+  background-image: url('../images/cu-logo-white.svg');
 }

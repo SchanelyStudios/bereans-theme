@@ -25,7 +25,12 @@
 
   .article__title {
     @extend .h3;
-    margin-top: $baseline * 2 - 6px;
+    margin-top: $baseline;
+	min-height: $baseline * 5;
+  }
+
+  .article__header .date {
+	margin-top: 19px;
   }
 
   @include media-breakpoint-up(md) {
@@ -92,6 +97,10 @@
   @include list-unstyled;
   @include flex;
   flex-flow: row wrap;
+  li {
+	  padding-top: 0;
+	  padding-bottom: 0;
+  }
 }
 
 @include media-breakpoint-up(lg) {

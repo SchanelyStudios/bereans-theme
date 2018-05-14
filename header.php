@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="grid-on">
   <head>
     <title><?php wp_title(); ?></title>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -19,6 +19,9 @@
     	<p class="header__tagline">
     		Engaging today's political economy <br/> with truth and reason
     	</p>
+      <p class="header__sponsorship">
+        sponsored by <i class="cu-logo cu-logo--white">Cedarville University</i>
+      </p>
     	<form class="header__search-form">
     		<input type="text" class="form-control" placeholder="Looking for something?" />
     		<div class="input-group-append">
@@ -27,7 +30,7 @@
           </button>
     		</div>
     	</form>
-    	<nav class="header__nav">
+    	<nav class="header__navbar">
         <?php
             wp_nav_menu( array(
                 'theme_location' => 'top',
@@ -37,9 +40,9 @@
             // * nav-link__about
             // * nav-link__subscribe
         ?>
+      	<ul class="header__social-media-links">
+      		<li><a href="#"><i class="icon icon--twitter icon--bright icon--lg"></i></a></li>
+      		<li><a href="#"><i class="icon icon--facebook icon--bright icon--lg"></i></a></li>
+      	</ul>
     	</nav>
-    	<ul class="header__social-media-links">
-    		<li><a href="#"><i class="icon icon--twitter icon--light icon--lg"></i></a></li>
-    		<li><a href="#"><i class="icon icon--facebook icon--light icon--lg"></i></a></li>
-    	</ul>
     </header>

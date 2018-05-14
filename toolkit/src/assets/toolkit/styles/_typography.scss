@@ -12,7 +12,7 @@ address {
 }
 
 blockquote {
-	padding: 6px $gutter;
+	padding: 7px $gutter 5px;
 	margin: 0;
     position: relative;
     border-left: none;
@@ -30,9 +30,10 @@ blockquote {
 				display: inline-block;
 				padding-left: 8px;
 				content: "\201D";
-				font-size: $h1-font-size;
+				font-size: 4.8rem;
 				line-height: 0;
-				vertical-align: -14px;
+				vertical-align: -25px;
+                margin-bottom: -3px;
 				color: theme-color('mid-dark');
 			}
 		}
@@ -40,8 +41,8 @@ blockquote {
 	&::before {
 		content: "\201C";
 		position: absolute;
-		font-size: $h1-font-size;
-		top: 1px;
+		font-size: 4.8rem;
+		top: 21px;
 		left: 15px;
         color: theme-color('mid-dark');
         font-weight: 400;
@@ -158,11 +159,11 @@ mark {
 }
 
 li {
-	font-weight: 300;
+  font-weight: 300;
   @include type-setup(
       $margin-top: 0,
-      $padding-top: 6px,
-      $padding-bottom: 6px
+      $padding-top: 7px,
+      $padding-bottom: 5px
   );
 }
 
@@ -192,8 +193,8 @@ p {
     font-weight: 300;
     @include type-setup(
         $margin-top: 0,
-        $padding-top: 6px,
-        $padding-bottom: 6px
+        $padding-top: 7px,
+        $padding-bottom: 5px
     );
 }
 

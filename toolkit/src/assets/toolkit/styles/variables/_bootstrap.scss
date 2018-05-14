@@ -13,6 +13,7 @@ $gray-900: $gray;
 
 $blue-brand:  #104466;
 $blue:    #248ACD;
+$blue-lt: #5AB9F8;
 $purple:  #830FBD;
 $red:     #C91400;
 $orange:  #C96700;
@@ -20,13 +21,17 @@ $yellow:  #FDB81E;
 $green:   #49AC38;
 $teal:    #2DC9BD;
 
-$colors: ("blue-brand": $blue-brand);
+$colors: (
+  "blue-brand": $blue-brand,
+  "blue-bright": $blue-lt
+);
 $colors: map-remove($colors, "cyan", "pink", "indigo");
 
 $primary: $blue;
 $secondary: $orange;
 $info: $teal;
 $dark: $gray;
+$bright: $blue-lt;
 
 //
 // Body

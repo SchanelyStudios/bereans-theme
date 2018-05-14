@@ -1,22 +1,36 @@
 .header {
+  @include col-pad;
   background-color: $blue-brand;
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-rows: ($baseline * 9) 0 ($baseline * 6);
+  box-sizing: border-box;
+  grid-template-rows: ($baseline * 10) auto auto auto auto;
   grid-template-areas:
-    "logo    nav     social-media"
-    "tagline tagline tagline"
-    "search  search  search";
+    "logo"
+    "tagline"
+	"sponsorship"
+    "search"
+	"nav";
 
   @include media-breakpoint-up(sm) {
-    grid-template-columns: auto 1fr auto 140px;
-    grid-template-rows: ($baseline * 4) ($baseline * 6);
+    grid-template-columns: 25% 75%;
+    grid-template-rows: ($baseline * 6) ($baseline * 5) auto auto;
     grid-template-areas:
-      "logo tagline tagline social-media"
-      "logo search  nav     nav"
+      "logo tagline"
+	  "logo sponsorship"
+	  "search search"
+      "nav  nav";
   }
+
+  @include media-breakpoint-up(md) {
+	grid-template-columns: 25% 35% auto 190px;
+    grid-template-rows: ($baseline * 8) ($baseline * 6);
+    grid-template-areas:
+      "logo tagline tagline sponsorship"
+	  "logo search  nav     nav";
+  }
+
   @include media-breakpoint-up(lg) {
-    grid-template-rows: ($baseline * 6) ($baseline * 6);
+	grid-template-columns: (1/6 * 100%) (5/12 * 100%) auto 190px;
   }
 }
 
@@ -25,31 +39,36 @@
   margin-top: 0;
   padding-top: $baseline * 2;
   @include col-pad;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.header__nav {
+.header__navbar {
   grid-area: nav;
-  margin-top: $baseline + 6px;
-  & > ul {
-    @include list-unstyled;
-    width: 100%;
-    & > li {
-      width: 100%;
-      &:last-child { margin-bottom: 0; }
-    }
-    a {
-      display: block;
-      width: 100%;
-    }
+  margin-top: $baseline;
+  display: flex;
+  justify-content: space-between;
+  .menu {
+	@include list-unstyled;
+	flex: 1;
+	display: flex;
+	justify-content: space-around;
+	& > li {
+	  flex: 1;
+	  margin-right: $pad;
+	  padding-top: 0;
+	  padding-bottom: 0;
+	}
+	a {
+	  display: block;
+	  width: 100%;
+	}
   }
 }
 
 .header__search-form {
   grid-area: search;
-  padding-top: 12px;
-  @include col-pad;
   @extend .input-group;
-  max-width: 600px;
   .form-control {
     background-color: transparent;
     border:none;
@@ -63,16 +82,17 @@
 }
 
 .header__social-media-links {
-  grid-area: social-media;
+  display: flex;
+  justify-content: space-between;
   @include list-unstyled;
-  margin-top: $baseline * 2;
-  @include col-pad;
+  position: relative;
+  top: -3px;
   & > li {
-    text-align: right;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    margin-bottom: 6px;
-    &:last-child { margin-bottom: 0; }
+    margin-left: 0;
+    margin-right: $pad;
+    &:last-child {
+	  margin-right: 0;
+	}
     & > a {
       @include btn(link);
       padding: 0;
@@ -80,61 +100,73 @@
   }
 }
 
+.header__sponsorship {
+  grid-area: sponsorship;
+  color: white;
+  text-align: center;
+  .cu-logo {
+	display: inline-block;
+	margin-left: $pad;
+  }
+}
+
 .header__tagline {
   grid-area: tagline;
-  @include col-pad;
-  margin-top: 0;
   font-size: 1.6rem;
   font-style: italic;
   color: $blue;
-  display: none;
+  text-align: center;
 }
 
 @include media-breakpoint-up(sm) {
   .header__logo {
     @include col-pad(false, false, $pad);
-    padding-top: $baseline;
+    padding-top: $baseline * 2;
   }
-  .header__nav {
-    margin-top: $baseline;
-    & > ul {
-      display: flex;
-      justify-content: flex-end;
-      & > li {
-        padding-top: 0;
-        padding-bottom: 0;
-        width: auto;
-        @include col-pad(false, false, $pad);
-        & > a { width: auto; }
-      }
-    }
+  .header__nav {}
+  .header__social-media-links {}
+  .header__tagline {
+	margin-top: $baseline * 2;
   }
-  .header__social-media-links {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: $baseline;
-    & > li { @include col-pad(false, $pad); }
+  .header__sponsorship {
+    padding-top: 15px;
   }
-  .header__tagline { display: block; }
 }
 @include media-breakpoint-up(md) {
+  .header__logo {
+	padding-top: 27px;
+  }
+  .header__search-form {
+	padding-left: $pad;
+	margin-top: $baseline;
+	padding-right: $pad;
+  }
+  .header__sponsorship {
+	margin-top: $baseline;
+	.cu-logo {
+	  margin-left: 0;
+	}
+  }
   .header__tagline {
-    margin-top: $baseline;
+    margin-top: $baseline * 2.5;
     font-size: 1.8rem;
-    & > br { display: none; }
+	text-align: left;
+	padding-left: $pad;
   }
 }
 @include media-breakpoint-up(lg) {
-  .header__logo {
-    padding-top: 15px;
-  }
-  .header__social-media-links {
-    margin-top: $baseline * 2 + 5px;
-  }
+  .header__logo {}
+  .header__social-media-links {}
   .header__tagline {
-    margin-top: $baseline * 3;
+    margin-top: $baseline * 2;
     padding-top: 2px;
     font-size: 2.7rem;
-    line-height: $baseline * 2;
+    line-height: $baseline * 3;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__tagline {
+    margin-top: $baseline * 3;
+	& > br { display: none; }
   }
 }
