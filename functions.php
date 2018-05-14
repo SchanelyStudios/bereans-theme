@@ -60,7 +60,7 @@ function custom_list_authors( $args = '' ) {
 ?>
   <li class="author author--item">
     <a href="<?php echo get_the_author_meta( 'user_nicename', $author->ID ); ?>">
-      <img class="author__image" src="http://placehold.it/36x36" />
+      <img class="author__image" src="<?php bloginfo('template_directory'); ?>/pics/authors/<?php echo $author->user_nicename; ?>-thumb.png" />
       <b class="author__name">
         <?php
           if ( $args['show_fullname'] && $author->first_name && $author->last_name ) {
