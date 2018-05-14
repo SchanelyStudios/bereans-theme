@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="grid-on">
+<html <?php language_attributes(); ?>>
   <head>
     <title><?php wp_title(); ?></title>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -22,14 +22,7 @@
       <p class="header__sponsorship">
         sponsored by <i class="cu-logo cu-logo--white">Cedarville University</i>
       </p>
-    	<form class="header__search-form">
-    		<input type="text" class="form-control" placeholder="Looking for something?" />
-    		<div class="input-group-append">
-    			<button class="btn btn-primary" type="button" alt="Search">
-            <i class="icon icon--search icon--light icon--sm"></i>
-          </button>
-    		</div>
-    	</form>
+    	<?php get_search_form(); ?>
     	<nav class="header__navbar">
         <?php
             wp_nav_menu( array(

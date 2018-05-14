@@ -68,6 +68,10 @@
 
 .header__search-form {
   grid-area: search;
+  label {
+    margin-top: 0;
+    display: none;
+  }
   @extend .input-group;
   .form-control {
     background-color: transparent;
@@ -123,8 +127,6 @@
     @include col-pad(false, false, $pad);
     padding-top: $baseline * 2;
   }
-  .header__nav {}
-  .header__social-media-links {}
   .header__tagline {
 	margin-top: $baseline * 2;
   }
@@ -155,8 +157,6 @@
   }
 }
 @include media-breakpoint-up(lg) {
-  .header__logo {}
-  .header__social-media-links {}
   .header__tagline {
     margin-top: $baseline * 2;
     padding-top: 2px;
