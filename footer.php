@@ -8,11 +8,6 @@
                 'theme_location' => 'bottom',
                 'container' => false
             ));
-            // TODO: Add the following:
-            // * Home
-            // * About
-            // * Archives
-            // * Subscribe
         ?>
     	</nav>
     	<p class="footer__copyright">
@@ -22,8 +17,8 @@
         sponsored by <i class="cu-logo">Cedarville University</i>
       </p>
       <ul class="footer__social-media-links">
-    		<li><a href="#"><i class="icon icon--twitter icon--lg"></i></a></li>
-    		<li><a href="#"><i class="icon icon--facebook icon--lg"></i></a></li>
+    		<li><a href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fbereansatthegate.com%2F&screen_name=Bereans_Gate&tw_p=followbutton&variant=2.0"><i class="icon icon--twitter icon--lg"></i></a></li>
+    		<li><a href="https://www.facebook.com/BereansattheGate"><i class="icon icon--facebook icon--lg"></i></a></li>
     	</ul>
     </footer>
     <?php wp_footer(); ?>

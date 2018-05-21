@@ -20,11 +20,18 @@ function YoutubeList() {
 			{{/each}} \
 		</ul> \
 	';
-	this.videoLatestTemplate = '<b class="videos__latest"><i class="icon icon--play icon--xs"></i>Latest: {{snippet.title}}</b>';
+	this.videoLatestTemplate = '\
+		<img class="videos__latest-img" src="{{snippet.thumbnails.standard.url}}" /> \
+		<b class="videos__latest"> \
+			<i class="icon icon--play icon--xs"></i> \
+			Latest: {{snippet.title}} \
+		</b> \
+	';
 	this.videoListErrorTemplate = '<p>Video list unavailable</p>';
 
 
 	this.displayVideos = function(data) {
+		console.log(data);
 		var firstItem = data.items.shift();
 		var videoLastestHTML = this.videoLatestCompiled(firstItem);
 		var videoListHTML = this.videoListCompiled(data);

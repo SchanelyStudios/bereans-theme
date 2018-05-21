@@ -10582,10 +10582,17 @@
 				{{/each}} \
 			</ul> \
 		';
-		this.videoLatestTemplate = '<b class="videos__latest"><i class="icon icon--play icon--xs"></i>Latest: {{snippet.title}}</b>';
+		this.videoLatestTemplate = '\
+			<img class="videos__latest-img" src="{{snippet.thumbnails.standard.url}}" /> \
+			<b class="videos__latest"> \
+				<i class="icon icon--play icon--xs"></i> \
+				Latest: {{snippet.title}} \
+			</b> \
+		';
 		this.videoListErrorTemplate = '<p>Video list unavailable</p>';
 
 		this.displayVideos = function (data) {
+			console.log(data);
 			var firstItem = data.items.shift();
 			var videoLastestHTML = this.videoLatestCompiled(firstItem);
 			var videoListHTML = this.videoListCompiled(data);
@@ -15530,8 +15537,9 @@
 			this.data = {
 				items: []
 			};
-			if (this.limitTo > 0) {
-				for (var i = 0; i < this.limitTo; i++) {
+			if (this.limitTo > 0 && data.length > 0) {
+				var maxItems = data.length < this.limitTo ? data.length : this.limitTo;
+				for (var i = 0; i < maxItems; i++) {
 					this.data.items.push(data[i]);
 				}
 			} else {

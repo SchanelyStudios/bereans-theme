@@ -12,6 +12,11 @@ function register_menus() {
 }
 add_action( 'init', 'register_menus' );
 
+if ( function_exists ('register_sidebar')) {
+    register_sidebar (array('name' => 'sidebar'));
+    register_sidebar (array('name' => 'subscribe'));
+}
+
 
 /**
  * Based on wp_list_authors from https://codex.wordpress.org/Template_Tags/wp_list_authors

@@ -29,13 +29,10 @@
                 'theme_location' => 'top',
                 'container' => false
             ));
-            // TODO: In Appearance > Menus > Screen Options select CSS classes and provide the following:
-            // * nav-link__about
-            // * nav-link__subscribe
         ?>
       	<ul class="header__social-media-links">
-      		<li><a href="#"><i class="icon icon--twitter icon--bright icon--lg"></i></a></li>
-      		<li><a href="#"><i class="icon icon--facebook icon--bright icon--lg"></i></a></li>
+      		<li><a href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fbereansatthegate.com%2F&screen_name=Bereans_Gate&tw_p=followbutton&variant=2.0"><i class="icon icon--twitter icon--bright icon--lg"></i></a></li>
+      		<li><a href="https://www.facebook.com/BereansattheGate"><i class="icon icon--facebook icon--bright icon--lg"></i></a></li>
       	</ul>
     	</nav>
     </header>

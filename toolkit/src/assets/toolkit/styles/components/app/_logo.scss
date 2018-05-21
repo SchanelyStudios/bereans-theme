@@ -8,14 +8,14 @@
   background-position: top center;
   background-size: 100%;
   background-repeat: no-repeat;
-  background-image: url('../images/logo-md-blue.svg');
+  background-image: url('../images/logo-md-blue@2x.png');
   @include media-breakpoint-up(md) {
     width: 120px;
     height: 109px;
   }
 }
 .logo--white {
-  background-image: url('../images/logo-md-white.svg');
+  background-image: url('../images/logo-md-white@2x.png');
 }
 
 .cu-logo {
@@ -27,10 +27,10 @@
   background-position: top center;
   background-size: 100%;
   background-repeat: no-repeat;
-  background-image: url('../images/cu-logo-blue.svg');
+  background-image: url('../images/cu-logo-blue@2x.png');
 }
 .cu-logo--white {
   width: 144px;
   height: 36px;
-  background-image: url('../images/cu-logo-white.svg');
+  background-image: url('../images/cu-logo-white@2x.png');
 }

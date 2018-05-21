@@ -19,3 +19,7 @@ hr {
 	display: none;
 	margin-bottom: $baseline - 1px;
 }
+
+.widget-list {
+	@include list-unstyled;
+}

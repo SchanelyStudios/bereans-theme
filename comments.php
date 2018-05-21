@@ -1,11 +1,7 @@
 <?php function show_comment() { ?>
 <div class="comment">
   <div class="comment__head">
-    <img src="http://placehold.it/30x30" class="user-image" />
-    <?php if ( $args['avatar_size'] != 0 ) {
-      // TODO: Provide default avatar image...
-      echo get_avatar( $comment, $args['avatar_size'], null, null, array('class' => 'user-image'));
-    } ?>
+    <?php echo get_avatar( $comment, $args['avatar_size'], null, null, array('class' => 'user-image')); ?>
     <p class="user-name">
       <?php echo get_comment_author_link(); ?>
     </p>

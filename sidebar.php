@@ -20,6 +20,10 @@
   </div>
   <div class="authors">
     <h2>Authors</h2>
+    <!-- TODO: Update with actual author IDs -->
     <?php custom_list_authors(array('include'=>'6,5,7,3,4')); ?>
   </div>
+  <ul class="widget-list">
+    <?php dynamic_sidebar( 'sidebar' ); ?>
+  </ul>
 </div>

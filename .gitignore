@@ -1,3 +1,5 @@
 *.scssc
 node_modules
 toolkit/node_modules
+.idea
+Bereans@TheGate

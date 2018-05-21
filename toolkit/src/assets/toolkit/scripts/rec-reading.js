@@ -67,8 +67,9 @@ function RecReading() {
 		this.data = {
 			items: []
 		};
-		if (this.limitTo > 0) {
-			for (var i = 0; i < this.limitTo; i++) {
+		if (this.limitTo > 0 && data.length > 0) {
+			let maxItems = data.length < this.limitTo ? data.length : this.limitTo;
+			for (var i = 0; i < maxItems; i++) {
 				this.data.items.push(data[i]);
 			}
 		} else {
