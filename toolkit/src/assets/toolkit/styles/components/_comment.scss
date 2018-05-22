@@ -4,7 +4,6 @@
   @include media-breakpoint-up(sm) {
     padding-left: 58px;
   }
-
 }
 
 .comments {
@@ -17,10 +16,25 @@
 .comment {
   position: relative;
   margin-bottom: $baseline * 2;
+  @include comment-border;
 }
 
-.comment__body {
-  @include comment-border;
+.comment-body {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	flex-flow: row wrap;
+	.comment-author {
+		width: 50%;
+	}
+	.comment-meta {
+		width: 50%;
+		text-align: right;
+	}
+	p { width: 100%; }
+	.reply {
+		margin-bottom: $baseline;
+	}
 }
 
 .comment__head {
@@ -70,6 +84,13 @@
 	label {
 		margin-top: 0;
 	}
+}
+
+.comment-list {
+  @extend .list-unstyled;
+  .children {
+	  @extend .list-unstyled;
+  }
 }
 
 .user-image {

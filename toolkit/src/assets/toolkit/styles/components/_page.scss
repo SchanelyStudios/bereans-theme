@@ -9,3 +9,9 @@
 .page-title {
 	@include col-pad;
 }
+
+.alignleft {
+	float: left;
+	margin-right: $pad;
+	margin-bottom: $pad;
+}

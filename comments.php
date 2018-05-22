@@ -22,17 +22,8 @@
     <?php } ?>
     <?php comment_text(); ?>
   </div>
-  <p class="comment__reply-link">
-    <?php  comment_reply_link(
-      array_merge(
-        $args,
-        array(
-          'add_below' => $add_below,
-          'depth'     => $depth,
-          'max_depth' => $args['max_depth']
-        )
-      )
-    ); ?>
+  <p class="comment__reply-link reply">
+    <?php comment_reply_link(); ?>
   </p>
   <div class="comment__replies">
 <?php } ?>
@@ -44,18 +35,9 @@
 <?php
 // You can start editing here -- including this comment!
 if ( have_comments() ) : ?>
-<div class="comment-list">
-  <?php
-    wp_list_comments( array(
-      'avatar_size' => 30,
-      'style'       => 'div',
-      'short_ping'  => true,
-      'reply_text'  => '<p class="comment__reply-link"><a href="#"><i class="icon icon--reply icon--sm"></i> Reply</a></p>',
-      'callback'    => 'show_comment',
-      'end-callback' => 'show_comment_end'
-    ) );
-  ?>
-</ol>
+<ul class="comment-list">
+  <?php wp_list_comments(); ?>
+</ul>
 
 <?php else : ?>
 <p>No comments yet.</p>

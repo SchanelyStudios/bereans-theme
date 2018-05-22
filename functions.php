@@ -2,6 +2,11 @@
 
 define('YOUTUBE_API_KEY', 'AIzaSyCrFnyIuEoH3xQSdo9PTFALctloubzPp1k');
 
+function bereanstheme_enqueue_script() {
+  wp_enqueue_script("comment-reply");
+}
+add_action( 'wp_enqueue_scripts', 'bereanstheme_enqueue_script' );
+
 function register_menus() {
     register_nav_menus(
         array(
@@ -64,7 +69,8 @@ function custom_list_authors( $args = '' ) {
 		}
 ?>
   <li class="author author--item">
-    <a href="<?php echo get_the_author_meta( 'user_nicename', $author->ID ); ?>">
+    <a class="author__bio-link"
+      href="<?php bloginfo('url'); ?>/<?php echo get_the_author_meta( 'user_nicename', $author->ID ); ?>">
       <img class="author__image" src="<?php bloginfo('template_directory'); ?>/pics/authors/<?php echo $author->user_nicename; ?>-thumb.png" />
       <b class="author__name">
         <?php

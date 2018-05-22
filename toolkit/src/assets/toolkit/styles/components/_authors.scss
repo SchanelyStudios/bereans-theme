@@ -6,6 +6,13 @@
 
 .author__articles-link {
   margin-top: 24px;
+  width: auto;
+}
+
+.author__bio-link {
+	flex: 1;
+	display: flex;
+	align-items: flex-start;
 }
 
 .author__image {
@@ -21,7 +28,7 @@
 .author__name {
   display: inline-block;
   position: relative;
-  top: 2px;
+  top: $baseline * 2;
 }
 
 .authors {
@@ -39,7 +46,7 @@
     @include media-breakpoint-up(sm) {
       @include flex;
       flex-flow: column wrap;
-      height: $baseline * 12;
+      height: $baseline * 21;
       margin-left: -1 * $pad;
       margin-right: -1 * $pad;
       li {
