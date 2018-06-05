@@ -20,7 +20,7 @@
     		Engaging today's political economy <br/> with truth and reason
     	</p>
       <p class="header__sponsorship">
-        sponsored by <i class="cu-logo cu-logo--white">Cedarville University</i>
+        sponsored by <a href="http://cedarville.edu" target="_blank" class="cu-logo cu-logo--white">Cedarville University</a>
       </p>
     	<?php get_search_form(); ?>
     	<nav class="header__navbar">

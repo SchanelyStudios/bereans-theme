@@ -14,7 +14,7 @@
     		Copyright &copy; 2018 by Bereans at the Gate. <br /> All rights reserved. <br /> Suggested readings powered by <a href="http://newsapi.org">NewsAPI.org</a>.
     	</p>
       <p class="footer__sponsorship">
-        sponsored by <i class="cu-logo">Cedarville University</i>
+        sponsored by <a href="http://cedarville.edu" target="_blank" class="cu-logo">Cedarville University</a>
       </p>
       <ul class="footer__social-media-links">
     		<li><a href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fbereansatthegate.com%2F&screen_name=Bereans_Gate&tw_p=followbutton&variant=2.0"><i class="icon icon--twitter icon--lg"></i></a></li>
