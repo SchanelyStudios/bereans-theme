@@ -20,8 +20,9 @@
 
 .footer__nav {
   margin-top: $baseline + 3px;
+  display: flex;
+  justify-content: center;
   ul {
-    width: 164px;
     @include list-inline;
     margin-left: auto;
     margin-right: auto;

@@ -3,3 +3,6 @@ node_modules
 toolkit/node_modules
 .idea
 Bereans@TheGate
+.DS_Store
+package-lock.json
+.sass-cache

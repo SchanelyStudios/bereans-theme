@@ -21,7 +21,7 @@ function YoutubeList() {
 		</ul> \
 	';
 	this.videoLatestTemplate = '\
-		<img class="videos__latest-img" src="{{snippet.thumbnails.standard.url}}" /> \
+		<img class="videos__latest-img" src="{{snippet.thumbnails.high.url}}" /> \
 		<b class="videos__latest"> \
 			<i class="icon icon--play icon--xs"></i> \
 			Latest: {{snippet.title}} \
@@ -31,8 +31,8 @@ function YoutubeList() {
 
 
 	this.displayVideos = function(data) {
-		console.log(data);
-		var firstItem = data.items.shift();
+		var firstItem = data.items[0];
+		console.log(data, firstItem);
 		var videoLastestHTML = this.videoLatestCompiled(firstItem);
 		var videoListHTML = this.videoListCompiled(data);
 		$("#latest-video").html(videoLastestHTML);

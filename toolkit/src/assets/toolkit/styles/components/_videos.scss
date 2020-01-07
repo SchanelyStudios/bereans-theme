@@ -27,9 +27,11 @@
   height: $baseline * 14;
   position: relative;
   text-align: center;
+
   .videos__latest-img {
-	  max-width: 100%;
-	  height: $baseline * 14;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   @media screen and (min-width: 400px) {
     height: $baseline * 18;
